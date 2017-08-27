@@ -17,6 +17,10 @@ public class BufferedImageCanvas implements Canvas {
 	@Override
 	public void paint(Stroke stroke) {
 		Graphics2D g = image.createGraphics();
+
+		int x = 0, y = 0;
+		g.setClip(x, y, image.getWidth(), image.getHeight());
+
 		stroke.paint(g);
 		g.dispose();
 	}
