@@ -16,7 +16,7 @@ public enum Suit {
 	 */
 	DIAMOND('\u2666', Color.RED),
 	/**
-	 * v
+	 * 
 	 */
 	HEART('\u2665', Color.RED),
 	/**
