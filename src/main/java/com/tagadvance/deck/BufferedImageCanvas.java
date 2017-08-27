@@ -15,9 +15,9 @@ public class BufferedImageCanvas implements Canvas {
 	}
 
 	@Override
-	public void paint(Paintbrush paintbrush) {
+	public void paint(Stroke stroke) {
 		Graphics2D g = image.createGraphics();
-		paintbrush.paint(g);
+		stroke.paint(g);
 		g.dispose();
 	}
 
