@@ -5,14 +5,14 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
-public class RenderingHintsPaintbrushDecorator implements Paintbrush {
+public class RenderingHintsPaintbrushDecorator implements Stroke {
 
-	private final Paintbrush paintbrush;
+	private final Stroke paintbrush;
 	private final RenderingHints hints;
 
-	public RenderingHintsPaintbrushDecorator(Paintbrush paintbrush, RenderingHints hints) {
+	public RenderingHintsPaintbrushDecorator(Stroke stroke, RenderingHints hints) {
 		super();
-		this.paintbrush = checkNotNull(paintbrush, "paintbrush must not be null");
+		this.paintbrush = checkNotNull(stroke, "stroke must not be null");
 		this.hints = checkNotNull(hints, "hints must not be null");
 	}
 
