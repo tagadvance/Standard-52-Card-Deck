@@ -2,6 +2,6 @@ package com.tagadvance.deck;
 
 public interface Canvas {
 
-	public void paint(Paintbrush paintbrush);
+	public void paint(Stroke stroke);
 
 }
