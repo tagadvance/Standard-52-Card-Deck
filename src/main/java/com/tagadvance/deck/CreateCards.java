@@ -1,5 +1,6 @@
 package com.tagadvance.deck;
 
+import java.awt.Desktop;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -40,6 +41,8 @@ public class CreateCards {
 				ImageIO.write(image, formatName, output);
 			}
 		}
+		
+		Desktop.getDesktop().open(testDir);
 	}
 
 }
