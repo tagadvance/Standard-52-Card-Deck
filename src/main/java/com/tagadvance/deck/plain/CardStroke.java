@@ -11,8 +11,8 @@ import java.awt.geom.AffineTransform;
 import java.awt.geom.RoundRectangle2D;
 
 import com.tagadvance.deck.Card;
-import com.tagadvance.deck.Stroke;
 import com.tagadvance.deck.Rank;
+import com.tagadvance.deck.Stroke;
 import com.tagadvance.deck.Suit;
 
 public class CardStroke implements Stroke {

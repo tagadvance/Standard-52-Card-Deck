@@ -17,11 +17,12 @@ public class CreateCards {
 		File testDir = new File(tmp, "test");
 		testDir.mkdirs();
 		System.out.println(testDir);
-		
-		
+
+
 		ImageFactory imageFactory = CardImageFactory.newInstance();
 		RenderingHints hints = RenderingHintsFactory.createQualityRenderingHints();
-		StrokeFactory strokeFactory = new RenderingHintsStrokeFactory(hints, new PlainCardStrokeFactory());
+		StrokeFactory strokeFactory =
+				new RenderingHintsStrokeFactory(hints, new PlainCardStrokeFactory());
 
 		String formatName = "PNG";
 		for (Rank rank : Rank.values()) {
@@ -31,9 +32,9 @@ public class CreateCards {
 				BufferedImage image = imageFactory.createBufferedImage();
 				Canvas canvas = new BufferedImageCanvas(image);
 				canvas.paint(stroke);
-				
-//				ImageIcon icon = new ImageIcon(image);
-//				JOptionPane.showMessageDialog(null, icon);
+
+				// ImageIcon icon = new ImageIcon(image);
+				// JOptionPane.showMessageDialog(null, icon);
 				String name = String.format("%s-of-%ss.png", rank, suit).toLowerCase();
 				File output = new File(testDir, name);
 				ImageIO.write(image, formatName, output);
