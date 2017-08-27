@@ -1,13 +1,12 @@
 package com.tagadvance.deck;
 
 import java.awt.Graphics2D;
-import java.util.Collection;
 
 public class CompositeStroke implements Stroke {
 
-	private final Collection<Stroke> strokes;
+	private final Stroke[] strokes;
 
-	public CompositeStroke(Collection<Stroke> strokes) {
+	public CompositeStroke(Stroke... strokes) {
 		super();
 		this.strokes = strokes;
 	}
